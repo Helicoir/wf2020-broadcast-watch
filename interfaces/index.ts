@@ -8,3 +8,9 @@ export type User = {
   id: number
   name: string
 }
+
+export type Program = {
+  name: string
+  id: number
+  day: 0 | 1 | 2
+}
