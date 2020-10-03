@@ -24,6 +24,7 @@ const IndexPage: React.FC = () => {
           <p>name: {datum.meta.title}</p>
           <p>配信タイトル: {datum.video.title}</p>
           <img src={datum.video.thumbnails.default.url} alt="サムネイル"/>
+          <span>{datum.video.liveBroadcastContent === 'live' ? '配信中' : '終了 or 予約'}</span>
         </div>
       ))}
     </Layout>

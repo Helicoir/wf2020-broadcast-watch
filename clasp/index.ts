@@ -7,9 +7,9 @@ const getData = function(sheetName: string) {
   return rows.map((row, index) => {
     row[0] = row[0].replace('https://www.youtube.com/watch?v=', '')
     return {
-      name: row[1],
+      title: row[1],
       id: index,
-      url: row[0],
+      videoID: row[0],
       day: row[2]
     }
   }).slice(1)
