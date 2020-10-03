@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
 import Layout from '../components/Layout'
 import { Video } from '../interfaces'
 import { getVideoListBySheet } from '../utils/youtube'
