@@ -4,10 +4,12 @@ const getData = function(sheetName: string) {
     return null
   }
   const rows = sheet.getDataRange().getValues()
-  return rows.map(row => {
+  return rows.map((row, index) => {
+    row[0] = row[0].replace('https://www.youtube.com/watch?v=', '')
     return {
       name: row[1],
-      id: row[0],
+      id: index,
+      url: row[0],
       day: row[2]
     }
   }).slice(1)

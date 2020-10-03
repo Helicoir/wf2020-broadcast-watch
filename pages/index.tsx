@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
-import { Program } from '../interfaces'
-import { getProgramData } from '../utils/programs'
+import { Video } from '../interfaces'
+import { getVideoListBySheet } from '../utils/youtube'
 
 const IndexPage: React.FC = () => {
-  const [data, setData] = useState<Program[]>([])
+  const [data, setData] = useState<Video[]>([])
   useEffect(() => {
-    getProgramData.then(res => setData(res))
-  })
-  console.log(data)
+    getVideoListBySheet().then(res => {
+      setData(res)
+    })
+  }, [])
   return (
     <Layout title="Home | Next.js + TypeScript Example">
       <h1>Hello Next.js 👋</h1>
@@ -19,7 +20,11 @@ const IndexPage: React.FC = () => {
         </Link>
       </p>
       {data && data.map(datum => (
-        <p>{datum.name}</p>
+        <div key={datum.meta.id}>
+          <p>name: {datum.meta.title}</p>
+          <p>配信タイトル: {datum.video.title}</p>
+          <img src={datum.video.thumbnails.default.url} alt="サムネイル"/>
+        </div>
       ))}
     </Layout>
   )
