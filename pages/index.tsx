@@ -13,12 +13,6 @@ const IndexPage: React.FC = () => {
   }, [])
   return (
     <Layout title="Home | Next.js + TypeScript Example">
-      <h1>Hello Next.js 👋</h1>
-      <p>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </p>
       {data && data.map(datum => (
         <div key={datum.meta.id}>
           <p>name: {datum.meta.title}</p>
