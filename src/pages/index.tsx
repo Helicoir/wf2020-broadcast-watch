@@ -9,7 +9,10 @@ const Text = styled.p`
   color: red;
 `
 const VideoContainer = styled.div`
-  ${tw`flex`};
+  ${tw`max-w-sm rounded overflow-hidden shadow-2xl bg-white p-8`};
+  width: 200px;
+  height: 300px;
+
 `
 
 const IndexPage: React.FC = (props) => {
