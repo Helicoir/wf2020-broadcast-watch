@@ -10,7 +10,7 @@ class CustomDocument extends Document<Props> {
   static getInitialProps({ renderPage }: any) {
     const sheet = new ServerStyleSheet();
 
-    const page = renderPage(App => props =>
+    const page = renderPage((App: any) => (props: any) =>
       sheet.collectStyles(<App {...props} />),
     );
 
