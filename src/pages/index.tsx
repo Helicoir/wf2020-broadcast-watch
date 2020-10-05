@@ -7,7 +7,7 @@ import dayjs from 'dayjs'
 const tw = require('tailwind.macro')
 
 const Headline = styled.h2`
-  ${tw`text-lg font-bold pt-2 pl-0 pb-1`}
+  ${tw`text-lg font-bold pt-4 pl-0 pb-2`}
 `
 const Description = styled.p`
   ${tw`text-sm text-gray-600 p-1 pl-0`}
@@ -16,7 +16,7 @@ const StatementBox = styled.span`
   ${tw`text-sm font-bold text-white rounded px-2 py-1`}
 `
 const Datetime = styled.p`
-  ${tw`text-sm text-gray-600 pl-0`}
+  ${tw`text-sm text-gray-600 p-1 pl-0`}
 `
 const VideoContainer = styled.a`
   display: block;
@@ -35,7 +35,7 @@ const VideoContainer = styled.a`
   `};
 `
 const VideoContent = styled.div`
-  ${tw`p-4`}
+  ${tw`p-6`}
 `
 
 const IndexPage: React.FC = () => {
