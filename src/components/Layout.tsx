@@ -8,13 +8,17 @@ type Props = {
 }
 
 const StyledLayout = styled.div`
-  margin: 0 auto;
-  ${tw`flex flex-wrap justify-around`}
+  ${tw`flex flex-wrap justify-between m-auto`}
   max-width: 1200px;
   min-height: 100vh;
 `
 
-const Layout = ({ children }: Props) => (
+const ContentArea = styled.div`
+  ${tw`flex flex-col`}
+`
+
+const Layout = ({ children }: Props) => {
+  return (
   <StyledLayout>
     {/* <Head>
       <title>{title}</title>
@@ -37,13 +41,10 @@ const Layout = ({ children }: Props) => (
         | <a href="/api/users">Users API</a>
       </nav>
     </header> */}
-    <hr/>
-    {children}
-    <footer>
-      <hr />
-      {/* <span>I'm here to stay (Footer)</span> */}
-    </footer>
+    <ContentArea>
+      {children}
+    </ContentArea>
   </StyledLayout>
-)
+)}
 
 export default Layout
