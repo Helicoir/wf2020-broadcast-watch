@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const tw = require('tailwind.macro')
 
 const Title = styled.h1`
-  ${tw`text-6xl font-bold  text-center text-gray-900`}
+  ${tw`text-6xl font-bold  text-center text-gray-900 p-12`}
 `
 const Description = styled.p`
   ${tw`text-gray-600 text-center`}
