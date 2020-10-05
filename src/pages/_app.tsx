@@ -1,6 +1,7 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
-import '~/src/assets/css/styles.css'
+import '../assets/css/styles.css'
+import '../assets/css/reset.css'
 import styled from 'styled-components'
 const tw = require('tailwind.macro')
 
