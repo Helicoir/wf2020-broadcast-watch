@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import type { AppProps } from 'next/app'
 import '~/src/assets/css/styles.css'
 import styled from 'styled-components'
