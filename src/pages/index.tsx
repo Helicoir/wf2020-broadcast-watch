@@ -18,7 +18,8 @@ const StatementBox = styled.span`
 const Datetime = styled.p`
   ${tw`text-sm text-gray-600`}
 `
-const VideoContainer = styled.div`
+const VideoContainer = styled.a`
+  display: block;
   ${tw`
   flex
   min-w-lg
@@ -48,7 +49,7 @@ const IndexPage: React.FC = () => {
   return (
     <Layout title="Home | Next.js + TypeScript Example">
       {data && data.map(datum => (
-        <VideoContainer key={datum.meta.id} style={{ backgroundColor: datum.video.liveBroadcastContent == 'live' ? '#D7F1D5' : 'white' }}>
+        <VideoContainer key={datum.meta.id} style={{ backgroundColor: datum.video.liveBroadcastContent == 'live' ? '#D7F1D5' : 'white' }} href={`https://youtube.com/watch?v=${datum.meta.videoID}, _blank`}>
           <img src={datum.video.thumbnails.high.url} width="200" alt="サムネイル" />
           <VideoContent>
             <StatementBox style={{ backgroundColor: statementbg(datum.video.liveBroadcastContent) }}>{statementtext(datum.video.liveBroadcastContent)}</StatementBox>
