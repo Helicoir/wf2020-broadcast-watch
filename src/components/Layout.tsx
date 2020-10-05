@@ -1,12 +1,25 @@
 import React, { ReactNode } from 'react'
+import styled from 'styled-components'
+const tw = require('tailwind.macro')
 
 type Props = {
   children?: ReactNode
   title?: string
 }
 
-const Layout = ({ children }: Props) => (
-  <div>
+const StyledLayout = styled.div`
+  ${tw`flex flex-wrap justify-between m-auto`}
+  max-width: 1200px;
+  min-height: 100vh;
+`
+
+const ContentArea = styled.div`
+  ${tw`flex flex-col`}
+`
+
+const Layout = ({ children }: Props) => {
+  return (
+  <StyledLayout>
     {/* <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -28,13 +41,10 @@ const Layout = ({ children }: Props) => (
         | <a href="/api/users">Users API</a>
       </nav>
     </header> */}
-    <hr/>
-    {children}
-    <footer>
-      <hr />
-      {/* <span>I'm here to stay (Footer)</span> */}
-    </footer>
-  </div>
-)
+    <ContentArea>
+      {children}
+    </ContentArea>
+  </StyledLayout>
+)}
 
 export default Layout
