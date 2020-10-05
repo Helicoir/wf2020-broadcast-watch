@@ -51,7 +51,7 @@ const IndexPage: React.FC = () => {
     <Layout title="Home | Next.js + TypeScript Example">
       {data && data.map(datum => (
         <VideoContainer key={datum.meta.id} style={{ backgroundColor: datum.video.liveBroadcastContent == 'live' ? '#D7F1D5' : 'white' }} href={`https://youtube.com/watch?v=${datum.meta.videoID}, _blank`}>
-          <img src={datum.video.thumbnails.high.url} width="200" alt="サムネイル" />
+          <img className="test" src={datum.video.thumbnails.high.url} width="200" alt="サムネイル" />
           <VideoContent>
             <StatementBox style={{ backgroundColor: statementbg(datum.video.liveBroadcastContent) }}>{statementtext(datum.video.liveBroadcastContent)}</StatementBox>
             <Headline>{datum.video.title}</Headline>
