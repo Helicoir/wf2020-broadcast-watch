@@ -24,6 +24,7 @@ class CustomDocument extends Document<Props> {
         <Head>
           <meta name="viewport" content="width=device-width,height=device-height" key="viewport" />
           <meta name="theme-color" content="#087da1" key="themeColor" />
+          <link rel="stylesheet" href="../assets/css/reset.css"/>
           {this.props.styleTags}
         </Head>
 
