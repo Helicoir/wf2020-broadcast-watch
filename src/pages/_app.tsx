@@ -8,12 +8,12 @@ import { ButtonComponent } from '../components/Btn'
 const tw = require('tailwind.macro')
 
 const WrapComponent = styled.main`
-  ${tw`px-48 pt-6`}
+  ${tw`md:px-48 md:pt-36 pt-12`}
   font-family: 'Avenir Next', 'Helvetica', 'Hiragino Kaku Gothic ProN';
   background: #ECF1F9;
 `
 const Title = styled.h1`
-  ${tw`text-6xl font-bold text-gray-900 pb-12`}
+  ${tw`md:text-6xl text-3xl font-bold text-gray-900 pb-12`}
 `
 const Description = styled.p`
   ${tw`text-gray-600`}
@@ -28,8 +28,7 @@ const App = ({
 }: AppProps) => {
   return (
     <WrapComponent>
-      <Hr />
-      <div className={'flex justify-between'}>
+      <div className={'flex md:justify-between justify-center'}>
         <div className={'flex flex-col'}>
           <Title>Broadcast Watch</Title>
           <Description>早稲田祭2020 配信状態監視画面</Description>

@@ -8,7 +8,7 @@ type Props = {
 }
 
 const ButtonBase = styled.div`
-  ${tw`m-auto rounded-lg p-5 font-bold text-white`}
+  ${tw`m-auto rounded-lg p-5 font-bold text-white md:block hidden`}
   background: #be0006;
   &:hover {
     cursor: pointer;
