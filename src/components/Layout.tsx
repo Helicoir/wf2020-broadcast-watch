@@ -9,12 +9,12 @@ type Props = {
 
 const StyledLayout = styled.div`
   ${tw`flex flex-wrap justify-between m-auto`}
-  max-width: 1200px;
+  max-width: 1600px;
   min-height: 100vh;
 `
 
 const ContentArea = styled.div`
-  ${tw`flex flex-col`}
+  ${tw`flex flex-wrap content-start`}
 `
 
 const Layout = ({ children }: Props) => {
